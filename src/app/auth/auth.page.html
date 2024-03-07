@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Login Form</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-input type="email" label="Email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" label="Password"></ion-input>
+      </ion-item>
+      <ion-button expand="full" color="primary" [routerLink]="['/places']"
+        >Login</ion-button
+      >
+    </ion-card-content>
+  </ion-card>
+</ion-content>
