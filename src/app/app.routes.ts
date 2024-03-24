@@ -2,11 +2,11 @@ import { Routes } from '@angular/router';
 import { TabsPage } from './tabs/tabs.page';
 
 export const routes: Routes = [
-  // {
-  //   path: '',
-  //   redirectTo: 'auth',
-  //   pathMatch: 'full',
-  // },
+  {
+    path: '',
+    redirectTo: 'auth',
+    pathMatch: 'full',
+  },
   {
     path: 'auth',
     loadComponent: () => import('./auth/auth.page').then( m => m.AuthPage)
