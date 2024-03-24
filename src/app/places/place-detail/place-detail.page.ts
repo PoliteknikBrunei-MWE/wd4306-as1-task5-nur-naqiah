@@ -36,12 +36,12 @@ export class PlaceDetailPage implements OnInit {
         return;
       } 
       const placesId = paramMap.get('placesId');
-      // fetch recipe
+      // fetch places
       this.loadedPlaces = this.placesService.getPlaces(placesId!) as Places | undefined;
       if (this.loadedPlaces === undefined || Object.keys(this.loadedPlaces).length === 0) {
         // handle undefined case
         this.alertController.create({
-          header: 'Recipe not found',
+          header: 'Places not found',
           message: 'Seems like the place has been removed or does not exist.',
           buttons: [
             {
