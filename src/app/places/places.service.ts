@@ -30,14 +30,26 @@ private places: Places[] = [
     {
         id: 'p1',
         title: 'Brunei Muara',
-        imageUrl: 'https://img.freepik.com/free-photo/deep-fried-wonton-dark-surface_1150-43553.jpg?size=626&ext=jpg',
-        ingredients: ['Chicken Meat', ' Oil', ' Wonton Wrapper']
+        imageUrl: 'assets/BM.jpg',
+        location: ['SOAS Mosque']
     },
     {
         id: 'p2',
         title: 'Tutong',
-        imageUrl: 'https://img.freepik.com/free-photo/baked-chicken-wings-asian-style-tomatoes-sauce-plate_2829-10657.jpg?size=626&ext=jpg',
-        ingredients: ['Chicken Wing', ' Oil', ' Tomato Sauce']
+        imageUrl: 'assets/TTG.jpg',
+        location: ['Mercu Tanda Kenangan']
+    },
+    {
+        id: 'p3',
+        title: 'Kuala Belait',
+        imageUrl: 'assets/KB.jpg',
+        location: ['Teko']
+    },
+    {
+        id: 'p4',
+        title: 'Temburong',
+        imageUrl: 'assets/TBG.jpg',
+        location: ['Honeycomb']
     },
 ];
 }

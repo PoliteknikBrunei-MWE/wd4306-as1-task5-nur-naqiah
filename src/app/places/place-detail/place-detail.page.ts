@@ -59,7 +59,7 @@ export class PlaceDetailPage implements OnInit {
     });
   }
 
-  onDeleteRecipe() {
+  onDeletePlaces() {
     this.alertController.create({
       header: 'Are you sure?',
       message: 'Do you really want to delete the places?',

@@ -20,14 +20,14 @@
   
   <ion-list>
     <ion-item
-    *ngFor="let recipe of places"
+    *ngFor="let places of places"
     [routerLink]="['/places', places.id]">
 
     <ion-avatar slot="start">
-      <ion-img [src]="place.imageUrl" />
+      <ion-img [src]="places.imageUrl" />
     </ion-avatar>
     <ion-label>
-      <h2>{{ place.title }}</h2>
+      <h2>{{ places.title }}</h2>
     </ion-label>
   </ion-item>
   </ion-list>
