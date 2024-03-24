@@ -15,10 +15,10 @@ export const routes: Routes = [
   //   path: 'places',
   //   loadComponent: () => import('./places/places.page').then((m) => m.PlacesPage),
   // },
-  {
-    path: 'place-detail',
-    loadComponent: () => import('./places/place-detail/place-detail.page').then( m => m.PlaceDetailPage)
-  },
+  // {
+  //   path: 'place-detail',
+  //   loadComponent: () => import('./places/place-detail/place-detail.page').then( m => m.PlaceDetailPage)
+  // },
   {
     path: 'offers',
     loadComponent: () => import('./offers/offers.page').then( m => m.OffersPage)
@@ -43,6 +43,10 @@ export const routes: Routes = [
     path: 'places',
     redirectTo: '/tabs/places',
     pathMatch: 'full',
+  },
+  {
+  path: 'places/:placesId',
+  loadComponent: () => import('./places/place-detail/place-detail.page').then( m => m.PlaceDetailPage)
   },
   {
     path: 'tabs',

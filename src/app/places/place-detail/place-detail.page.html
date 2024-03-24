@@ -1,17 +1,47 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>place-detail</ion-title>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/places"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{loadedPlaces?.title}}</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onDeletePlaces()">
+        <ion-icon name="trash" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">place-detail</ion-title>
+    <ion-toolbar color="dark">
+      <ion-title size="large">{{loadedPlaces?.title}}</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-card>
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col class="ion-no-padding">
+        <ion-img [src]="loadedPlaces?.imageUrl"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1 class="ion-text-center">{{loadedPlaces?.title}}</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item *ngFor="let ig of loadedPlaces?.ingredients">
+            {{ ig }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- <ion-card>
     <ion-card-content>
       <ion-img src="assets/brunei-darussalam.jpg" alt="image"></ion-img>
     </ion-card-content>
@@ -31,5 +61,5 @@
         Book
       </ion-button>
     </ion-row>
-  </ion-grid>
+  </ion-grid> -->
 </ion-content>

@@ -6,14 +6,49 @@
 
 <ion-content [fullscreen]="true">
   <ion-card>
-    <ion-card-content
-      ><ion-img src="assets/brunei-darussalam.jpg" alt="Image"></ion-img>
+    <ion-card-content>
+      <ion-img src="assets/brunei-darussalam.jpg" alt="Image"></ion-img>
     </ion-card-content>
   </ion-card>
 
-  <ion-list>
+  <!-- <ion-list>
     <ion-item *ngFor="let places of places">
       <ion-label>{{ places }}</ion-label>
     </ion-item>
+  </ion-list> -->
+
+  
+  <ion-list>
+    <ion-item
+    *ngFor="let recipe of places"
+    [routerLink]="['/places', places.id]">
+
+    <ion-avatar slot="start">
+      <ion-img [src]="place.imageUrl" />
+    </ion-avatar>
+    <ion-label>
+      <h2>{{ place.title }}</h2>
+    </ion-label>
+  </ion-item>
   </ion-list>
+
 </ion-content>
+
+<!-- <ion-list>
+  <ion-list>
+
+    <ion-item
+      *ngFor="let recipe of recipes"
+      [routerLink]="['/recipes', recipe.id]">
+
+      <ion-avatar slot="start">
+        <ion-img [src]="recipe.imageUrl" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ recipe.title }}</h2>
+        <p>{{ recipe.ingredients }}</p>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-list> -->
