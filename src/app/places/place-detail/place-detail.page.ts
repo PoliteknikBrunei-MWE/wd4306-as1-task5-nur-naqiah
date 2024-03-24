@@ -17,7 +17,7 @@ import { trash } from 'ionicons/icons';
 })
 export class PlaceDetailPage implements OnInit {
 
-  loadedRecipe: Places | undefined;
+  loadedPlaces: Places | undefined;
 
   constructor(
     private activatedRoute: ActivatedRoute, 
@@ -37,12 +37,12 @@ export class PlaceDetailPage implements OnInit {
       } 
       const placesId = paramMap.get('placesId');
       // fetch recipe
-      this.loadedPlaces = this.placesService.getPlaces(placesId!) as Recipe | undefined;
-      if (this.loadedPlaces === undefined || Object.keys(this.loadedRecipe).length === 0) {
+      this.loadedPlaces = this.placesService.getPlaces(placesId!) as Places | undefined;
+      if (this.loadedPlaces === undefined || Object.keys(this.loadedPlaces).length === 0) {
         // handle undefined case
         this.alertController.create({
           header: 'Recipe not found',
-          message: 'Seems like the recipe has been removed or does not exist.',
+          message: 'Seems like the place has been removed or does not exist.',
           buttons: [
             {
               text: 'Ok',
